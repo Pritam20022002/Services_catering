@@ -1,0 +1,254 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+:root{
+    --var-primary-color : #2888E8FF;
+}
+html{
+        /*            1 rem = 10 px               */
+    font-size: 62.5%;    
+}
+.logo img{
+    width: 10vw;
+    height: 20vh;
+    margin-top: 2vh;
+}
+h1,h2,h3,h4{
+    font-family: 'Lexend Deca', sans-serif;
+}
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 3rem;
+}
+p{
+    font-size: 1.8rem;
+    letter-spacing: 0.08rem;
+}
+button,input[type="submit"]{
+    border: 2px solid #fff;
+    outline: none;
+    padding: 0.6rem 1.2rem;
+    font-size:1.7rem;
+    text-transform: capitalize;
+    letter-spacing: 0.2rem;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Page Layout Styling */
+header{
+    height: 100vh;
+    /* background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.2)), url("/images/dna-3656587_1920.jpg"); */
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.container{
+    height: 10vh;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+ul{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    font-size: 2rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+li a{
+    color: white ;
+    text-decoration: none;
+}
+
+/* Home Page Styling */
+
+.hero-section .container{
+    height: inherit
+}
+.hero-content{
+    color: #fff;
+    text-align: center;
+}
+.hero-content p{
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+}
+.hero-content button{
+    margin-top: 2rem;
+    background-color: var(--var-primary-color);
+    border: none;
+    padding: 1rem 2rem;
+}
+.hero-content button:hover{
+    -webkit-box-shadow:0px 0px 31px 0px #fff;
+    -moz-box-shadow: 0px 0px 31px 0px var(--var-primary-color);
+    box-shadow: 0px 0px 31px 0px var(--var-primary-color);
+    transition: 0.2s;
+}
+
+/* Registration Page Styling */
+
+main{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registration , .login{
+    min-height: 20vw;
+    min-width: 70vw;
+    background-color:red;
+}
+.grid-two--column{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.form-text{
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.2)), url("/images/RegImg.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    padding: 3rem 2rem;
+    width: 50rem;
+    height: 60rem;
+}
+.login .form-text{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.2)), url("/images/woman-2141808_1920.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.form-text p{
+    width: 35ch;
+    text-align: center;
+    margin:2rem 0 3rem 0 ;
+}
+.form-text button{
+    background-color: #fff;
+    color:#000;
+}
+.form-text button:hover{
+   background-color: transparent; 
+   color: #fff;
+   height: 7rem;
+   font-size: 2rem;
+   font-weight: bold;
+   transition: .2s;
+}
+.btn a{
+    text-decoration: none;
+    color:#000;
+}
+
+.registration-form, .login-form{
+    width: 100%;
+    min-height: 75vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10%;
+}
+.registration-form p, .login-form p{
+    margin: 1rem 0 0.7rem 0;
+}
+.social-icons{
+    display:flex;
+    gap: 1.5rem;
+    margin: 1rem 0 .5rem 0;
+}
+.fa-brands{
+    width: 4rem;
+    height: 4rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size:2.5rem;
+}
+input{
+    width: 50rem;
+    height: 7rem;
+    margin: 0.7rem 0;
+    background-color: #e8e8e8;
+    border: none;
+    padding: 1rem 1.8rem;
+    letter-spacing: .2rem;
+    font-size: 25px;
+}
+input[type="submit"]{
+    margin-top: 1rem;
+    min-width: 10rem;
+    background-color: var(--var-primary-color);
+    color: white;
+    border-radius: 1.5rem;
+}
+.red{
+    background-color: red 
+}
+
+
+/* .registration:not(.login-section--display){
+    display: none;
+}
+.login-section--display .registration{
+    display: block;
+}
+.login-section--display .login{
+    display: none;
+} */
+
+ @media screen and (max-width:768px) {
+    .grid-two--column{
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+    .registration-header .container, .home-header .container{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .registration-header .container .logo, .home-header .container .logo{
+        padding-top: 2rem;
+    }
+    .registraition, .logo{
+        min-width: 90vw;
+    }
+    .form-text{
+        order: 1;
+    }
+    .registration, .login{
+        order: 0;
+    }
+    .form-text p {
+        width: 25ch;
+    }
+} 
