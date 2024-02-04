@@ -1,86 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Services Section</title>
-    <!-- Font Awesome CDN-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <!-- Google Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/style2.css" />
-  </head>
-  <body>
-    <header>{{>navbar}}
-    <section>
-      <div class="row">
-        <h2 class="section-heading">
-            <div class="photo">Profile Photo</div>
-              <div class="details">
-                <p>Name:</p>
-                <p>Age:</p>
-                <p>Sex:</p>
-                <p>Cust Id:</p>
-                <p>Expiry Date:</p>
-            </div>
-        </h2>
-      </div>
-      <div class="row">
-        <div class="column">
-          <div class="card">
-            <div class="icon-wrapper">
-              <i class="fas fa-hammer"></i>
-            </div>
-            <h3><a href="index.hbs">Service</a></h3>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <div class="icon-wrapper">
-              <i class="fas fa-brush"></i>
-            </div>
-            <h3>Health Reports</h3>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Profile</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <div class="icon-wrapper">
-              <i class="fas fa-wrench"></i>
+header {
+    background-color: #363535d0;
+    color: #fff;
+    padding: 20px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-info img {
+    border-radius: 50%;
+    margin-right: 20px;
+    max-width: 100px;
+}
+
+.details {
+    flex: 1;
+}
+
+.options {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.options h2 {
+    color: #333;
+}
+
+.options ul {
+    list-style: none;
+    padding: 0;
+}
+
+.options li {
+    margin-bottom: 10px;
+}
+
+.options a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #353434;
+    color: #fff;
+}
+
+    </style>
+</head>
+<body>
+{{>navbar}}
+    <header> 
+        <div class="profile-info">
+            <img src="profile-photo.jpg" alt="Profile Photo">
+            <div class="details">
+                <h1>Your Name</h1>
+                <p>Age: 30</p>
+                <p>Sex: Male</p>
+                <p>Customer ID: 12345</p>
+                <p>Expiry Date: 2025-01-01</p>
             </div>
-            <h3>Medicines</h3>
-          </div>
         </div>
-        <div class="column">
-          <div class="card">
-            <div class="icon-wrapper">
-              <i class="fas fa-truck-pickup"></i>
-            </div>
-            <h3>Lab tests</h3>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <div class="icon-wrapper">
-              <i class="fas fa-broom"></i>
-            </div>
-            <h3>Service Completion</h3>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-          <input type="submit" value="Partner services" />
-          <input type="submit" value="Feedback & Complaints" />
-          </div>
-        </div>
-      </div>
-    </section></header>
-  </body>
+    </header>
+
+    <section class="options">
+      <div class="services"><button type="submit">Services</button></div>
+        <div class="labtest"><button type="submit">Health report</button></div>
+        <div class="services"><button type="submit">Medicine</button></div>
+        <div class="labtest"><button type="submit">Lab tests</button></div>
+        <div class="services"><button type="submit">Service completion</button></div>
+        <div class="services"><button type="submit">Partner Service</button></div>
+        <div class="services"><button type="submit">Feedback and complaint</button></div>
+    </section>
+
+</body>
 </html>
