@@ -1,112 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css">
-    <title>Registration</title>
-  </head>
-  <body>
-    <header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-      {{>navbar}}
-      
-      <main>
-        <section class="user-container login-section--display">
-          <div class="registration">
-            <div class="grid-two--column">
-              <div class="form-text">
-                <h2>Welcome Back!</h2>
-                <p>
-                  If you already have an account. Enter your personal details to continue.
-                </p>
-                <button class="btn"><a href="login"> Login Here </a></button>
-              </div>
-              <div class="registration-form">
-                <h2>Create Account</h2>
-                <div class="social-icons">
-                  <a href="https://www.facebook.com" target="_blank"
-                    ><i class="fa-brands fa-facebook"></i
-                  ></a>
-                  <a href="https://accounts.google.com" target="_blank"
-                    ><i class="fa-brands fa-google"></i
-                  ></a>
-                </div>
-                <p>- - - - - or - - - - -</p>
-                <form action="/registration" method="post">
-                    <div class="input-field">
-                    <label for="firstname">
-                      <input
-                        type="text"
-                        name="firstname"
-                        id="firstname"
-                        placeholder="First Name"
-                        required
-                      />
-                    </label>
-                  </div>
-                  <div class="input-field">
-                    <label for="lastname">
-                      <input
-                        type="text"
-                        name="lastname"
-                        id="lastname"
-                        placeholder="Last Name"
-                        required
-                      />
-                    </label>
-                  </div>
-                  <div class="input-field">
-                    <label for="Email">
-                      <input
-                        type="email"
-                        name="email"
-                        id="Email"
-                        placeholder="Email"
-                        required
-                      />
-                    </label>
-                  </div>
-                  <div class="input-field">
-                    <label for="Password">
-                      <input
-                        type="password"
-                        name="password"
-                        id="Password"
-                        placeholder="Password"
-                        required
-                      />
-                    </label>
-                  </div>
-                   <div class="input-field">
-                    <label for="password">
-                      <input
-                        type="password"
-                        name="conpassword"
-                        id="password"
-                        placeholder="Confirm Password"
-                        required
-                      />
-                    </label>
-                  </div>
-                  <div class="input-field">
-                    <input type="submit" value="register" />
-                  </div>
-                                    <div class="input-field">
-                    <input type="submit" value="SOS" />
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
 
-        </section>
-      </main>
-    </header>
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
 
-  </body>
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .red{
+            background-color:red;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/registration" method="post">
+        <h2>Register</h2>
+        <label for="firstname">
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              placeholder="First Name"
+              required
+            />
+          </label>
+          <label for="lastname">
+            <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              placeholder="Last Name"
+              required
+            />
+          </label>
+
+          <label for="Email">
+            <input
+              type="email"
+              name="email"
+              id="Email"
+              placeholder="Email"
+              required
+            />
+          </label>
+
+          <label for="Password">
+            <input
+              type="password"
+              name="password"
+              id="Password"
+              placeholder="Password"
+              required
+            />
+          </label>
+        
+          <label for="password">
+            <input
+              type="password"
+              name="conpassword"
+              id="password"
+              placeholder="Confirm Password"
+              required
+            />
+          </label>
+
+        <button type="submit">Register</button>
+        <button class ="red" type="submit">SOS</button>
+    </form>
+
+</body>
 </html>

@@ -32,10 +32,13 @@ app.get("/contact", (req, res) => {
   res.render("contact");
 });
 app.get("/login", (req, res) => {
-  res.render("login");
+  res.render("index");
 });
-app.get("/entry", (req, res) => {
-  res.render("entry");
+app.get("/profile", (req, res) => {
+  res.render("profile");
+});
+app.get("/service_tab", (req, res) => {
+  res.render("service_tab");
 });
 
 app.post("/registration", async (req, res) => {
@@ -55,7 +58,7 @@ app.post("/registration", async (req, res) => {
       });
 
       const registered = await resgisteruser.save();
-      res.status(201).render("entry");
+      res.status(201).render("profile");
 
     } else {
         res.send("Re-enter the password");
@@ -72,7 +75,7 @@ app.post("/login", async (req, res) => {
     const useremail = await Register.findOne({email:email});
 
     if(useremail.password === password){
-      res.status(201).render("entry");
+      res.status(201).render("profile");
     }else{
       res.send("Password not matching");
     }
