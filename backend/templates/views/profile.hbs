@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Profile</title>
+    <link rel="stylesheet" href="css/style2.css">
     <style>
         body {
     font-family: Arial, sans-serif;
@@ -14,57 +15,74 @@
 }
 
 header {
-    background-color: #363535d0;
+    background-color: #840982;
     color: #fff;
     padding: 20px;
 }
 
 .profile-info {
-    display: flex;
-    align-items: center;
-}
+      display: flex;
+      align-items: center;
+    }
 
 .profile-info img {
-    border-radius: 50%;
     margin-right: 20px;
     max-width: 100px;
-}
+    border: 1px solid black;
+    }
 
+ .logo {
+      margin-right: 30px;
+      width: 300px;
+      height: 200px;
+    }
 .details {
-    flex: 1;
-}
+      flex: 1;
+      margin-left: auto;
+    }
 
+    @media only screen and (max-width: 600px) {
+      .profile-info {
+        flex-direction: column;
+      }
+
+      .details {
+        margin-left: 0;
+      }
+
+      .logo {
+        margin-right: 0;
+      }
+    }
 .options {
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    justify-content: center;
+      align-items: center;
+      height: 50vh;
+      margin-top: 3%;
 }
-
-.options h2 {
-    color: #333;
-}
-
-.options ul {
-    list-style: none;
-    padding: 0;
-}
-
-.options li {
-    margin-bottom: 10px;
-}
-
-.options a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-footer {
-    text-align: center;
+.optionbtn{
     padding: 10px;
-    background-color: #353434;
+    background-color: #5a79d1;
     color: #fff;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    cursor: pointer;
+    width: 30rem;
+}
+@media only screen and (max-width: 600px) {
+  .optionbtn {
+    width: 100%;
+  }
+}
+.optionbtn:hover{
+    background-color: #5da8e7;
 }
 
     </style>
@@ -73,10 +91,11 @@ footer {
 {{>navbar}}
     <header> 
         <div class="profile-info">
-            <img src="profile-photo.jpg" alt="Profile Photo">
+            <div class="logo"></div>
+            <img src="profile-photo.jpg" alt="Profile Photo">            
             <div class="details">
                 <h1>Your Name</h1>
-                <p>Age: 30</p>
+                <p>Age: 45</p>
                 <p>Sex: Male</p>
                 <p>Customer ID: 12345</p>
                 <p>Expiry Date: 2025-01-01</p>
@@ -85,13 +104,13 @@ footer {
     </header>
 
     <section class="options">
-      <div class="services"><button type="submit">Services</button></div>
-        <div class="labtest"><button type="submit">Health report</button></div>
-        <div class="services"><button type="submit">Medicine</button></div>
-        <div class="labtest"><button type="submit">Lab tests</button></div>
-        <div class="services"><button type="submit">Service completion</button></div>
-        <div class="services"><button type="submit">Partner Service</button></div>
-        <div class="services"><button type="submit">Feedback and complaint</button></div>
+        <button class="optionbtn"  type="submit">Services</button>
+        <button class="optionbtn" type="submit">Health report</button>
+        <button class="optionbtn" type="submit">Medicine</button>
+        <button class="optionbtn" type="submit">Lab tests</button>
+        <button class="optionbtn" type="submit">Service completion</button>
+        <button class="optionbtn" type="submit">Partner Service</button>
+        <button class="optionbtn" type="submit">Feedback and complaint</button>
     </section>
 
 </body>
